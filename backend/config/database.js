@@ -3,8 +3,8 @@ const dotenv = require('dotenv')
 dotenv.config()
 
 const sequelize = new Sequelize(process.env.database, process.env.user_name, process.env.password, {
-  host: "localhost",
-  dialect: "mysql",
+  host: process.env.host,
+  dialect:process.env.dialect,
 });
 
 const connectDB = async () => {
